@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real-Time Traffic Prediction</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background-color: #f4f6f8;
+    }
+
+    header {
+      background-color: #2196f3;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h2 {
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    header h2::before {
+      content: "🚦";
+      margin-right: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      flex-direction: column;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+    .btn {
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      margin: 1rem 0;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Real-Time Traffic Prediction</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="map.html">Traffic Map</a>
+      <a href="admin.html">Admin</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Signup</a>
+      <a href="forgot.html">forgot</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h3>Click below to get the live traffic prediction</h3>
+      <button class="btn" onclick="window.location.href='prediction.html'">
+        Get Live Traffic Prediction Now
+      </button>
+      <p>Click the button to load prediction...</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Traffic Prediction
+  </footer>
+
+</body>
+</html>

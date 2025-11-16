@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Traffic Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            background: #eef2f5;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.75rem;
+            display: flex;
+            align-items: center;
+        }
+
+        header h1::before {
+            content: "📍";
+            margin-right: 10px;
+        }
+
+        nav a {
+            margin-left: 1.5rem;
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .map-container {
+            height: 80vh;
+            margin: 2rem auto;
+            max-width: 95%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: #555;
+            font-size: 0.9rem;
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Live Traffic Map</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="map.html">Traffic Map</a>
+        </nav>
+    </header>
+
+    <!-- Map Display -->
+    <div class="map-container" id="map"></div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Traffic Prediction | Live Data from Google Maps
+    </footer>
+
+    <!-- Google Maps Script -->
+    <script>
+        function initMap() {
+            const center = { lat: 12.9716, lng: 77.5946 }; // Bengaluru
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 13,
+                center: center,
+                mapTypeId: 'roadmap',
+                styles: [
+                    {
+                        featureType: "poi.business",
+                        stylers: [{ visibility: "off" }]
+                    },
+                    {
+                        featureType: "transit",
+                        elementType: "labels.icon",
+                        stylers: [{ visibility: "off" }]
+                    }
+                ]
+            });
+
+            const trafficLayer = new google.maps.TrafficLayer();
+            trafficLayer.setMap(map);
+        }
+    </script>
+
+    <!-- Google Maps API with Your Key -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBS7vrwrqEUeYS7YvNFUCT-fqnN6NxKGA0&callback=initMap">
+    </script>
+</body>
+</html>

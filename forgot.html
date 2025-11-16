@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forgot Password</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fce4ec);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #2e3c59;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input:focus {
+      border-color: #00796b;
+    }
+
+    button {
+      width: 100%;
+      background-color: #00796b;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>🔐 Forgot Password</h2>
+
+    <div class="form-group">
+      <input type="text" placeholder="Username" />
+    </div>
+
+    <div class="form-group">
+      <input type="email" placeholder="Email" />
+    </div>
+
+    <div class="form-group">
+      <button>Send OTP</button>
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Enter OTP" />
+    </div>
+
+    <div class="form-group">
+      <input type="password" placeholder="New Password" />
+    </div>
+
+    <div class="form-group">
+      <button>Reset Password</button>
+    </div>
+  </div>
+</body>
+</html>
